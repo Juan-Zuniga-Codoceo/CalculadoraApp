@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#color-selector,
+#currency-selector {
+    margin-bottom: 10px;
+}
+
+#expenses {
+    margin-top: 20px;
+}
+
+#expense-list {
+    margin-bottom: 10px;
+}
+
+.expense-item {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 5px 10px;
+}

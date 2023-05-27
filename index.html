@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora de Gastos</h1>
+
+    <div id="calculator">
+        <input type="text" id="result" placeholder="0">
+        <div id="buttons">
+            <!-- Botones de números -->
+            <div class="row">
+                <button class="number" value="7">7</button>
+                <button class="number" value="8">8</button>
+                <button class="number" value="9">9</button>
+                <button class="operator" value="/">/</button>
+            </div>
+            <div class="row">
+                <button class="number" value="4">4</button>
+                <button class="number" value="5">5</button>
+                <button class="number" value="6">6</button>
+                <button class="operator" value="*">*</button>
+            </div>
+            <div class="row">
+                <button class="number" value="1">1</button>
+                <button class="number" value="2">2</button>
+                <button class="number" value="3">3</button>
+                <button class="operator" value="-">-</button>
+            </div>
+            <div class="row">
+                <button class="number" value="0">0</button>
+                <button class="decimal" value=".">.</button>
+                <button class="operator" value="+">+</button>
+                <button id="calculate">=</button>
+            </div>
+            <button id="clear">Limpiar</button>
+        </div>
+    
+        <!-- Transformador de divisas -->
+        <div id="currency-converter">
+            <h3>Transformador de Divisas</h3>
+            <input type="number" id="amount" placeholder="Cantidad">
+            <select id="from-currency">
+                <option value="USD">Dólar estadounidense (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra esterlina (GBP)</option>
+                <option value="JPY">Yen japonés (JPY)</option>
+                <option value="CLP">Peso chileno (CLP)</option>
+                <option value="ARS">Peso argentino (ARS)</option>
+            </select>
+            <select id="to-currency">
+                <option value="USD">Dólar estadounidense (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra esterlina (GBP)</option>
+                <option value="JPY">Yen japonés (JPY)</option>
+                <option value="CLP">Peso chileno (CLP)</option>
+                <option value="ARS">Peso argentino (ARS)</option>
+            </select>
+            <button id="convert">Convertir</button>
+            <div id="converted-amount"></div>
+        </div>
+    </div>
+    
+    <div id="expenses">
+        <h2>Gastos:</h2>
+        <div id="expense-list"></div>
+        <div id="expense-form">
+            <input type="text" id="expense-concept" placeholder="Concepto">
+            <input type="number" id="expense-amount" placeholder="Monto">
+            <button id="add-expense">Agregar Gasto</button>
+        </div>
+        <div id="totals">
+            <p>Total: <span id="total-amount">0</span></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
